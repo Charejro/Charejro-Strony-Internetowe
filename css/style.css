@@ -1466,6 +1466,85 @@ a, button, summary, label, select, input, textarea {
   text-align: center;
 }
 
+/* ============================================================
+   Optymalizacja mobilna: UX dotykowy i wydajność
+   ============================================================ */
+
+/* Dotyk: bez „przyklejonych” efektów hover po dotknięciu */
+@media (hover: none) {
+  .card:hover,
+  .mini-price:hover,
+  .btn:hover {
+    transform: none;
+  }
+  .card:hover {
+    border-color: var(--border);
+    box-shadow: none;
+  }
+  .mini-price:hover {
+    border-color: var(--border);
+    box-shadow: none;
+  }
+  .btn-primary:hover {
+    box-shadow: 0 14px 34px -14px rgba(45, 212, 191, 0.65);
+  }
+  .btn-ghost:hover {
+    background: rgba(148, 180, 225, 0.06);
+    border-color: var(--border-strong);
+    color: var(--text);
+  }
+  .browser-frame:hover {
+    border-color: var(--border-strong);
+  }
+  .browser-frame:hover img {
+    transform: none;
+  }
+}
+
+/* Szybsza reakcja na dotknięcie (bez opóźnień podwójnego tapnięcia) */
+a, button, summary, label, select, input, textarea {
+  touch-action: manipulation;
+}
+
+/* Menu mobilne: tło nie przewija się pod panelem */
+.site-nav { overscroll-behavior: contain; }
+
+/* Stopka: renderowana dopiero, gdy dojedziesz na dół (szybszy start telefonu) */
+.site-footer {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 760px;
+}
+
+/* Duże, wygodne elementy dotykowe na telefonach */
+@media (max-width: 700px) {
+  .btn { min-height: 44px; }
+  .footer-nav a,
+  .footer-contact a,
+  .footer-contact span {
+    padding: 0.3rem 0;
+  }
+}
+
+/* Telefony: lżejsza dekoracja hero, bez ciągłej animacji kart */
+@media (max-width: 640px) {
+  .browser-card { animation: none; }
+  .hero-visual { min-height: 300px; }
+}
+
+@media (max-width: 480px) {
+  .hero-visual {
+    aspect-ratio: 1 / 0.8;
+    min-height: 280px;
+  }
+  .browser-card.b1,
+  .browser-card.b3 { width: 52%; }
+  .browser-card.b2 { width: 72%; }
+  .stats li { padding: 1rem 0.75rem; }
+  .card { padding: 1.5rem 1.25rem; }
+  .facts li { flex-wrap: wrap; }
+}
+
+/* Mini cennik na telefonach: kompaktowo */
 @media (max-width: 700px) {
   .mini-pricing {
     grid-template-columns: 1fr;
@@ -1476,4 +1555,23 @@ a, button, summary, label, select, input, textarea {
   .mini-price { padding: 1.25rem 1.2rem 1.15rem; }
   .mini-price-value { font-size: 1.35rem; }
   .mini-price p:not(.mini-price-value) { font-size: 0.86rem; }
+}
+
+/* Większe pole dotknięcia dla linków tekstowych (WCAG) */
+.link-arrow {
+  display: inline-block;
+  padding: 0.35rem 0;
+}
+.footer-nav a,
+.footer-contact a,
+.footer-contact span {
+  padding: 0.4rem 0;
+}
+.contact-list a {
+  display: inline-block;
+  padding: 0.3rem 0;
+}
+.consent input {
+  width: 20px;
+  height: 20px;
 }

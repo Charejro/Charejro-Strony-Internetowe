@@ -93,6 +93,26 @@ i systemy (Windows, Linux, macOS, iOS, Android). Zadbano m.in. o:
 - Animacje respektują ustawienie systemowe „ogranicz animacje”
   (`prefers-reduced-motion`).
 
+### Mobilnie (UX i wydajność)
+
+- **Czcionki ładują się asynchronicznie** — nie blokują wyświetlenia strony
+  (najpierw widzisz treść, potem podmienia się krój), a nieużywana grubość
+  Sora 600 została usunięta.
+- Dekoracyjne obrazki w hero (boczne karty) i awatar ładują się **leniwie**.
+- Na ekranach ≤ 640 px **wyłączona jest ciągła animacja kart** (mniej pracy
+  procesora i baterii), a dekoracja hero jest mniejsza.
+- **Efekty „hover” wyłączone na urządzeniach dotykowych** (`@media (hover: none)`) —
+  nic nie „przykleja się” po dotknięciu.
+- **Większe pola dotykowe**: linki w stopce, dane kontaktowe i linki „Szczegóły”
+  mają powiększony obszar kliknięcia; checkbox ma 20 px.
+- `touch-action: manipulation` — szybsza reakcja na dotknięcie.
+- **Stopka renderuje się dopiero przy dojechaniu na dół** (`content-visibility`),
+  co przyspiesza start na telefonie.
+- Mini-cennik i przyciski mają osobne, kompaktowe zasady dla małych ekranów.
+
+> Po każdej zmianie plików lokalnie wgraj na GitHub: **wszystkie pliki `.html`
+> oraz `css/style.css`** (jeśli zmieniałeś skrypty — także `js/script.js`).
+
 Efekt: audyt **Lighthouse (Chrome) — dostępność 100, dobre praktyki 100, SEO 100**,
 a strona główna waży ok. **350 KB** przy pierwszym wejściu (wcześniej ponad 1,5 MB).
 
