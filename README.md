@@ -46,6 +46,10 @@ Formularz działa **automatycznie** (bez konta, bez serwera):
 
 Wszystko jest już aktywowane i przetestowane — nic nie trzeba konfigurować.
 
+> **Dla klientów:** potwierdzenie przychodzi z adresu `autoresponse@formsubmit.co`.
+> Jeśli ktoś go nie widzi w skrzynce, powinien zajrzeć do folderu **spam**
+> (informuje o tym też zielone potwierdzenie na stronie).
+
 ### Co i gdzie można zmienić (kontakt.html)
 
 - **Adres docelowy** — atrybut `action` formularza:

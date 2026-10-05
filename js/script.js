@@ -158,7 +158,26 @@
 
       var nextInput = form.querySelector('input[name="_next"]');
       if (nextInput) {
-        nextInput.value = window.location.origin + window.location.pathname + "#wyslano";
+        if (window.location.protocol === "http:" || window.location.protocol === "https:") {
+          nextInput.value = window.location.origin + window.location.pathname + "#wyslano";
+        } else {
+          /* Plik otwarty bezpośrednio z dysku (file://) — nie ustawiamy powrotu,
+             FormSubmit pokaże wtedy swoją stronę podziękowania. */
+          nextInput.value = "";
+        }
+      }
+
+      /* Potwierdzenie dla klienta — z kopią tego, co napisał(a) */
+      var autoresponseInput = form.querySelector('input[name="_autoresponse"]');
+      if (autoresponseInput) {
+        autoresponseInput.value =
+          "Dzień dobry,\n\n" +
+          "dziękuję za wiadomość wysłaną przez moją stronę. Potwierdzam, że do mnie dotarła — odpowiem najszybciej, jak to możliwe (zwykle w ciągu kilku godzin).\n\n" +
+          "Twoja wiadomość:\n" +
+          "Temat: " + topic + "\n\n" +
+          message + "\n\n" +
+          "W pilnej sprawie możesz zadzwonić: +48 501 589 194.\n\n" +
+          "Pozdrawiam,\nCezary Rybak — Charejro · strony internetowe";
       }
 
       /* Opcjonalne powiadomienie na WhatsApp (jeśli wpisano klucz) */
