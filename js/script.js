@@ -105,7 +105,14 @@
   }
 
   /* ---------- Powrót na stronę po wysłaniu formularza ---------- */
-  if (formSuccess && window.location.hash === "#wyslano") {
+  var justSent = false;
+  try {
+    justSent =
+      window.location.hash === "#wyslano" ||
+      window.location.search.indexOf("wyslano") !== -1;
+  } catch (e) { /* nic */ }
+
+  if (formSuccess && justSent) {
     formSuccess.hidden = false;
     window.setTimeout(function () {
       formSuccess.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -159,7 +166,10 @@
       var nextInput = form.querySelector('input[name="_next"]');
       if (nextInput) {
         if (window.location.protocol === "http:" || window.location.protocol === "https:") {
-          nextInput.value = window.location.origin + window.location.pathname + "#wyslano";
+          /* Powrót działa na każdym urządzeniu: parametr ?wyslano=1 (odporny na
+             przekierowania) + #wyslano dla pewności. */
+          nextInput.value =
+            window.location.origin + window.location.pathname + "?wyslano=1#wyslano";
         } else {
           /* Plik otwarty bezpośrednio z dysku (file://) — nie ustawiamy powrotu,
              FormSubmit pokaże wtedy swoją stronę podziękowania. */

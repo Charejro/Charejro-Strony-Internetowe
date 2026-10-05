@@ -44,6 +44,12 @@ Formularz działa **automatycznie** (bez konta, bez serwera):
 4. Wiadomość trafia na **charejro@gmail.com**.
 5. Klient dostaje na swojego maila **potwierdzenie z kopią wiadomości**.
 
+> **Ważne:** wiadomość i potwierdzenie są wysyłane w momencie przejścia
+> zabezpieczenia „Nie jestem robotem" — powrót na stronę to tylko pokazanie
+> zielonego potwierdzenia. Powrót działa na komputerze i telefonach
+> (iPhone / Android). Gdyby telefon pokazywał starszą wersję strony z pamięci
+> podręcznej, odśwież ją raz na twardo albo otwórz w oknie prywatnym.
+
 Wszystko jest już aktywowane i przetestowane — nic nie trzeba konfigurować.
 
 > **Dla klientów:** potwierdzenie przychodzi z adresu `autoresponse@formsubmit.co`.
