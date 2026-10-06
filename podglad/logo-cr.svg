@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 84" role="img" aria-label="CR — Charejro, strony internetowe">
+  <rect width="168" height="84" rx="18" fill="#000000"/>
+  <ellipse cx="63" cy="22" rx="17" ry="19.5" fill="#ffffff"/>
+  <ellipse cx="63" cy="22" rx="3" ry="5.5" fill="#000000"/>
+  <path d="M 62 19.15 L 90 33.15 L 90 46 Z" fill="#000000"/>
+  <path d="M 68 6.5 L 92 18.5 L 92 34.15 L 68 22.15 Z" fill="#ffffff"/>
+  <g fill="none" stroke="#ffffff" stroke-width="14" stroke-linejoin="round">
+    <path d="M 92 4 V 40"/>
+    <path d="M 92 10 H 99 Q 112 10 112 20 Q 112 30 99 30 H 92"/>
+    <path d="M 98 30 L 111 40"/>
+  </g>
+  <text x="84" y="56" text-anchor="middle" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="12.5" font-weight="700" letter-spacing="3" fill="#ffffff">CHAREJRO</text>
+  <text x="84" y="72" text-anchor="middle" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="8" font-weight="700" letter-spacing="1.5" fill="#ffffff">STRONY INTERNETOWE</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 84" role="img" aria-label="Charejro — wersja cartoon">
+  <rect width="168" height="84" rx="18" fill="#0b0b10"/>
+  <g font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="23" font-weight="900" text-anchor="middle" fill="#ffffff" stroke="#38bdf8" stroke-width="1.4" paint-order="stroke" stroke-linejoin="round">
+    <text x="14" y="40" transform="rotate(-7 14 40)">C</text>
+    <text x="34" y="38" transform="rotate(5 34 38)">H</text>
+    <text x="54" y="41" transform="rotate(-4 54 41)">A</text>
+    <text x="74" y="38" transform="rotate(6 74 38)">R</text>
+    <text x="94" y="41" transform="rotate(-5 94 41)">E</text>
+    <text x="114" y="38" transform="rotate(7 114 38)">J</text>
+    <text x="134" y="41" transform="rotate(-6 134 41)">R</text>
+    <text x="154" y="39" transform="rotate(4 154 39)">O</text>
+  </g>
+  <text x="84" y="63" text-anchor="middle" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="11" font-weight="700" letter-spacing="2" fill="#7dd3fc">strony internetowe</text>
+</svg>

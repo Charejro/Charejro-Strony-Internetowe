@@ -230,21 +230,17 @@ p { margin: 0 0 1rem; }
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.7rem;
+  gap: 1rem;
   flex-shrink: 0;
 }
 .brand-mark {
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
-  display: grid;
-  place-items: center;
-  background: var(--grad-btn);
-  color: #04222b;
-  font-family: var(--font-head);
-  font-weight: 800;
-  font-size: 1.05rem;
-  box-shadow: 0 10px 26px -12px rgba(45, 212, 191, 0.8);
+  width: 62px;
+  height: 56px;
+  flex-shrink: 0;
+}
+.footer-brand .brand-mark {
+  width: 88px;
+  height: 80px;
 }
 .brand-text {
   display: flex;
@@ -506,9 +502,9 @@ p { margin: 0 0 1rem; }
   justify-items: center;
 }
 .avatar {
-  width: min(240px, 60%);
+  width: min(260px, 70%);
   height: auto;
-  filter: drop-shadow(0 24px 50px rgba(45, 212, 191, 0.25));
+  filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.55));
 }
 .facts {
   width: 100%;
@@ -677,6 +673,16 @@ p { margin: 0 0 1rem; }
 }
 .portfolio-note a { color: var(--accent); font-weight: 600; }
 .portfolio-note a:hover { text-decoration: underline; }
+
+.portfolio-disclaimer {
+  max-width: 680px;
+  margin: 1.1rem auto 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
 
 /* ---------- Proces ---------- */
 .timeline {
@@ -1396,6 +1402,20 @@ a, button, summary, label, select, input, textarea {
 }
 
 /* ============================================================
+   Strona główna: sekcja „Moje podejście” + stopka bez bloku marki
+   ============================================================ */
+#o-mnie .stack-chips {
+  justify-content: center;
+  margin-top: 1.6rem;
+}
+#o-mnie .section-head .lead + .lead {
+  margin-top: 0.9rem;
+}
+.footer-brand > p:first-child {
+  margin-top: 0;
+}
+
+/* ============================================================
    Mini cennik na stronie głównej
    ============================================================ */
 .mini-pricing {
@@ -1522,6 +1542,24 @@ a, button, summary, label, select, input, textarea {
   .footer-contact a,
   .footer-contact span {
     padding: 0.3rem 0;
+  }
+}
+
+/* Małe telefony: kompaktowe logo i podpis, żeby nic się nie ściskało */
+@media (max-width: 430px) {
+  .brand {
+    gap: 0.45rem;
+  }
+  .brand-mark {
+    width: 50px;
+    height: 45px;
+  }
+  .footer-brand .brand-mark {
+    width: 66px;
+    height: 60px;
+  }
+  .brand-text small {
+    font-size: 0.62rem;
   }
 }
 

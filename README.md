@@ -8,7 +8,7 @@ niczego nie trzeba długo przewijać.
 
 | Plik | Zakładka | Zawartość |
 |---|---|---|
-| `index.html` | **Start** | Hero (3 przyciski: realizacje / cennik / kontakt), statystyki, „O mnie”, cennik w skrócie, FAQ, CTA |
+| `index.html` | **Start** | Hero (realizacje / cennik / kontakt), statystyki, „Moje podejście", cennik w skrócie, FAQ, CTA — bez danych osobowych (imię i marka występują tylko w nagłówku) |
 | `oferta.html` | **Oferta** | 6 usług + proces współpracy (5 kroków) |
 | `portfolio.html` | **Portfolio** | 3 realizacje ze zrzutami ekranu i opisami |
 | `cennik.html` | **Cennik** | 3 pakiety + gwarancje + FAQ |
@@ -132,13 +132,14 @@ img/portfolio-*-640.jpg        — miniatury projektów (telefony)
 img/portfolio-*-900.jpg        — miniatury projektów (tablety)
 img/portfolio-*-1200.jpg       — miniatury projektów (komputery)
 img/oryginaly/                 — oryginalne, pełne zrzuty ekranu (nieużywane na stronie)
-img/avatar.svg                 — awatar/monogram w sekcji „O mnie”
-favicon.svg                    — ikonka strony
+img/avatar.svg                 — grafika wizytówki (obecnie nieużywana na stronie; zachowana na przyszłość)
+img/logo.png                   — logo (nagłówek i stopka każdej strony)
+favicon.png                    — ikonka strony
 ```
 
 ## Co podmienić przy zmianach
 
-- **Ceny** — `cennik.html` (obecnie 899 / 1499 / 2499 zł „od”).
+- **Ceny** — `cennik.html` (obecnie 700 / 1200 / 2250 zł „od”).
 - **Opisy w portfolio** — `portfolio.html` (sekcje `.project`).
 - **Dane kontaktowe** — `kontakt.html`, stopki wszystkich podstron oraz `js/script.js`
   (adres e-mail i numer WhatsApp w sekcji `CONFIG` na górze pliku).
@@ -153,7 +154,7 @@ favicon.svg                    — ikonka strony
 ## Publikacja w internecie (za darmo — GitHub Pages)
 
 1. Zaloguj się na GitHub i utwórz nowe repozytorium, np. `moja-strona-ofertowa`.
-2. Wgraj do niego wszystkie pliki HTML oraz foldery `css/`, `js/`, `img/` i `favicon.svg`.
+2. Wgraj do niego wszystkie pliki HTML oraz foldery `css/`, `js/`, `img/` i `favicon.png`.
 3. Wejdź w **Settings → Pages**, wybierz źródło: gałąź `main` i folder `/ (root)`, zapisz.
 4. Po chwili strona będzie dostępna pod adresem:
    `https://TWOJA-NAZWA.github.io/moja-strona-ofertowa/`.
